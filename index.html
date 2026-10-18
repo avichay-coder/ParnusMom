@@ -398,7 +398,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 @keyframes grpIn { from { opacity: 0; transform: translateY(10px); } }
 @keyframes shake { 25% { transform: translateX(-5px); } 75% { transform: translateX(5px); } }
 @keyframes barUp { from { transform: translateY(100%); } }
-@keyframes ring { 0% { box-shadow: 0 0 0 0 rgba(6, 122, 45, .45); } 70%, 100% { box-shadow: 0 0 0 14px rgba(6, 122, 45, 0); } }
+@keyframes ring { 0% { box-shadow: 0 0 0 0 rgba(6, 122, 45, .45); } 70%, 100% { box-shadow: 0 0 0 14px rgba(6, 122, 0); } }
 </style>
 
 <div class="wrap">
@@ -488,23 +488,23 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
         <div class="item" data-id="big" data-name="משפחתית ענקית" data-price="293"><div class="info"><h3>משפחתית ענקית</h3><p class="meta">5 אינג'רות ענקיות, 6 תבשילים (270 מ"ל כל אחד), תבשיל נוסף של 500 מ"ל ואוואזה, מטבל פלפל חריף (150 גרם).</p><span class="price">293 ₪</span></div><div class="qty"></div></div>
         <div class="item" data-id="fam" data-name="משפחתית" data-price="223"><div class="info"><h3>משפחתית</h3><p class="meta">8 אינג'רות קטנות, 5 תבשילים (270 מ"ל כל אחד) ואוואזה, מטבל פלפל חריף (150 גרם).</p><span class="price">223 ₪</span></div><div class="qty"></div></div>
         <div class="item" data-id="small" data-name="ארוחה משפחתית קטנה" data-price="175"><div class="info"><h3>ארוחה משפחתית קטנה</h3><p class="meta">6 אינג'רות קטנות, 4 תבשילים (270 מ"ל כל אחד) ומטבל חריף (150 מ"ל).</p><p class="fine">* שירו, דובה וגומן בתוספת 3 ₪ לתבשיל. כתבו בהערות אילו, והסכום יעודכן באישור ההזמנה.</p><span class="price">175 ₪</span></div><div class="qty"></div></div>
-        <div class="item" data-id="doro" data-name="דורו ווט עם אינג'רה ענקית" data-price="80"><div class="info"><h3>מנת דורו وוט <span class="geez" lang="am">ዶሮ ወጥ</span></h3><p class="meta">שתי שוקיים ושתי ביצים, ואינג'רה ענקית אחת.</p><p class="fine">מזמינים יום מראש.</p><span class="price">80 ₪</span></div><div class="qty"></div></div>
+        <div class="item" data-id="doro" data-name="דורו ווט עם אינג'רה ענקית" data-price="80"><div class="info"><h3>מנת דורו ווט <span class="geez" lang="am">ዶሮ ወጥ</span></h3><p class="meta">שתי שוקיים ושתי ביצים, ואינג'רה ענקית אחת.</p><p class="fine">מזמינים יום מראש.</p><span class="price">80 ₪</span></div><div class="qty"></div></div>
         </section>
 
         <section class="grp" data-g="stews">
         <h3 class="group">תבשילים</h3>
         <p class="sizes">כל תבשיל בשלושה גדלים: 270 מ"ל, 500 מ"ל וליטר.</p>
         <h4 class="sublabel">חריפים</h4>
-        <div class="item multi dish"><div class="info"><div class="dishhead"><span class="dot" style="--dot: var(--d-wat)" aria-hidden="true"></span><div class="dn"><h3>דורו وוט <span class="geez" lang="am">ዶሮ ወጥ</span></h3><p class="sub">תבשיל עוף וביצים</p></div><span class="chip hot">חריף</span></div><p class="meta"><b>מכיל:</b> בצל, שום, צ'וו (תבלין אתיופי), פשתן טחון, כורכום וחוויג'.</p><p class="fine">מזמינים יום מראש.</p></div>
+        <div class="item multi dish"><div class="info"><div class="dishhead"><span class="dot" style="--dot: var(--d-wat)" aria-hidden="true"></span><div class="dn"><h3>דורו ווט <span class="geez" lang="am">ዶሮ ወጥ</span></h3><p class="sub">תבשיל עוף וביצים</p></div><span class="chip hot">חריף</span></div><p class="meta"><b>מכיל:</b> בצל, שום, צ'וו (תבלין אתיופי), פשתן טחון, כורכום וחוויג'.</p><p class="fine">מזמינים יום מראש.</p></div>
           <ul class="opts">
             <li class="opt" data-id="doroS" data-name="דורו ווט, מנה של שתי שוקיים ושתי ביצים" data-price="70"><span class="olab">מנה: 2 שוקיים, 2 ביצים<b>70 ₪</b></span><div class="qty"></div></li>
           </ul>
         </div>
-        <div class="item multi dish"><div class="info"><div class="dishhead"><span class="dot" style="--dot: var(--d-orange)" aria-hidden="true"></span><div class="dn"><h3>דובה وוט <span class="geez" lang="am">ዱባ ወጥ</span></h3><p class="sub">תבשיל דלעת, או לחילופין דלורית או בטטה</p></div><span class="chip hot">חריף</span></div><p class="meta"><b>מכיל:</b> שום, צ'וו (תבלין אתיופי), כורכום וחוויג'.</p><p class="fine">כתבו בהערות אם אתם רוצים דלורית או בטטה.</p></div>
+        <div class="item multi dish"><div class="info"><div class="dishhead"><span class="dot" style="--dot: var(--d-orange)" aria-hidden="true"></span><div class="dn"><h3>דובה ווט <span class="geez" lang="am">ዱባ ወጥ</span></h3><p class="sub">תבשיל דלעת, או לחילופין דלורית או בטטה</p></div><span class="chip hot">חריף</span></div><p class="meta"><b>מכיל:</b> שום, צ'וו (תבלין אתיופי), כורכום וחוויג'.</p><p class="fine">כתבו בהערות אם אתם רוצים דלורית או בטטה.</p></div>
           <ul class="opts">
-            <li class="opt" data-id="dub270" data-name="דובה وוט, 270 מ&quot;ל" data-price="28"><span class="olab">270 מ"ל<b>28 ₪</b></span><div class="qty"></div></li>
-            <li class="opt" data-id="dub500" data-name="דובה وוט, 500 מ&quot;ל" data-price="52"><span class="olab">500 מ"ל<b>52 ₪</b></span><div class="qty"></div></li>
-            <li class="opt" data-id="dub1000" data-name="דובה وוט, ליטר" data-price="104"><span class="olab">ליטר<b>104 ₪</b></span><div class="qty"></div></li>
+            <li class="opt" data-id="dub270" data-name="דובה ווט, 270 מ&quot;ל" data-price="28"><span class="olab">270 מ"ל<b>28 ₪</b></span><div class="qty"></div></li>
+            <li class="opt" data-id="dub500" data-name="דובה ווט, 500 מ&quot;ל" data-price="52"><span class="olab">500 מ"ל<b>52 ₪</b></span><div class="qty"></div></li>
+            <li class="opt" data-id="dub1000" data-name="דובה ווט, ליטר" data-price="104"><span class="olab">ליטר<b>104 ₪</b></span><div class="qty"></div></li>
           </ul>
         </div>
         <div class="item multi dish"><div class="info"><div class="dishhead"><span class="dot" style="--dot: var(--d-misir)" aria-hidden="true"></span><div class="dn"><h3>מ'ס'ר وוט <span class="geez" lang="am">ምስር ወጥ</span></h3><p class="sub">תבשיל עדשים</p></div><span class="chip hot">חריף</span></div><p class="meta"><b>מכיל:</b> שום, צ'וו (תבלין אתיופי), כורכום וחוויג'.</p></div>
