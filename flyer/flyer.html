@@ -75,7 +75,7 @@ html, body { margin: 0; background: #1a0f08; }
   padding: 12px 38px; font-weight: 800; font-size: 36px; box-shadow: 0 6px 0 var(--gold), 0 12px 24px rgba(58,34,24,.25); }
 
 /* platter */
-.platter { position: absolute; top: 726px; left: 50%; transform: translateX(-50%); width: 720px; height: 530px; }
+.platter { position: absolute; top: 726px; left: 50%; transform: translateX(-50%); width: 640px; height: 470px; }
 .platter svg { width: 100%; height: 100%; overflow: visible; }
 .dish-label { font-family: var(--font-body); font-weight: 800; font-size: 25px; fill: var(--fg);
   paint-order: stroke; stroke: #FFFBE0; stroke-width: 7px; stroke-linejoin: round; }
@@ -90,8 +90,8 @@ html, body { margin: 0; background: #1a0f08; }
   box-shadow: 0 0 0 7px #fff, 0 0 0 11px var(--green), 0 14px 26px rgba(0,0,0,.3); }
 
 /* price cards */
-.prices { position: absolute; top: 1394px; left: 40px; right: 40px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; align-items: end; }
-.card { position: relative; background: var(--cream); border-radius: 30px; padding: 26px 14px 22px; text-align: center;
+.prices { position: absolute; top: 1290px; left: 40px; right: 40px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; align-items: end; }
+.card { position: relative; background: var(--cream); border-radius: 30px; padding: 22px 14px 18px; text-align: center;
   border: 6px solid var(--green); box-shadow: 0 10px 0 #04551F, 0 20px 30px rgba(58,34,24,.28); }
 .card.hot { border-color: var(--red); box-shadow: 0 10px 0 #8E0B13, 0 20px 30px rgba(58,34,24,.32); padding-top: 40px; }
 .card .ribbon { position: absolute; top: -26px; left: 50%; transform: translateX(-50%); white-space: nowrap;
@@ -104,22 +104,30 @@ html, body { margin: 0; background: #1a0f08; }
 .card p { margin: 0; font-size: 27px; line-height: 1.3; font-weight: 500; color: var(--muted); }
 .card p b { color: var(--fg); font-weight: 800; }
 
-.cheap { position: absolute; z-index: 2; top: 1248px; left: 50%; transform: translateX(-50%) rotate(-2deg); white-space: nowrap;
+.cheap { position: absolute; z-index: 2; top: 1162px; left: 50%; transform: translateX(-50%) rotate(-2deg); white-space: nowrap;
   background: var(--red); color: #fff; font-family: var(--font-display); font-size: 64px; line-height: 1; padding: 20px 52px 24px; border-radius: 22px;
   box-shadow: 0 0 0 6px #fff, 0 0 0 10px var(--red), 0 16px 30px rgba(0,0,0,.3); }
 .cheap span { color: var(--yellow); }
 
 /* footer CTA */
-.cta { position: absolute; left: 0; right: 0; bottom: 62px; height: 222px; padding-top: 14px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; }
+.cta { position: absolute; left: 0; right: 0; bottom: 62px; height: 322px; padding: 38px 48px 0; display: grid; grid-template-columns: 1fr auto; grid-template-rows: auto auto auto 1fr; column-gap: 34px; row-gap: 10px; align-items: center; }
 .cta svg.bg { position: absolute; inset: 0; width: 100%; height: 100%; }
-.cta .row { position: relative; display: flex; align-items: center; gap: 26px; }
-.cta .ask { color: #fff; font-family: var(--font-display); font-size: 40px; line-height: 1.1; text-align: center; }
-.cta .ask small { display: block; font-family: var(--font-body); font-size: 23px; font-weight: 500; color: #FCE89A; }
-.wa { display: flex; align-items: center; gap: 16px; background: #25D366; color: #fff; border-radius: 999px; padding: 12px 34px 12px 18px;
-  box-shadow: 0 0 0 5px #fff, 0 10px 22px rgba(0,0,0,.35); }
-.wa svg { width: 66px; height: 66px; fill: #fff; flex: none; }
-.wa .num { font-family: var(--font-display); font-size: 62px; line-height: 1; direction: ltr; unicode-bidi: isolate; letter-spacing: 1px; }
-.slogan { position: relative; color: var(--yellow); font-weight: 700; font-size: 25px; }
+.cta > :not(.bg) { position: relative; }
+.cta h2 { grid-column: 1; margin: 0; color: #fff; font-family: var(--font-display); font-weight: 400; font-size: 44px; line-height: 1.1; text-align: center; }
+.cta h2 span { color: var(--yellow); }
+.links { grid-column: 1; display: flex; flex-direction: column; align-items: center; gap: 16px; }
+.wa, .web { display: flex; align-items: center; gap: 14px; border-radius: 999px; padding: 8px 30px 8px 14px; box-shadow: 0 0 0 4px #fff, 0 10px 22px rgba(0,0,0,.35); }
+.wa { background: #25D366; color: #fff; }
+.web { background: var(--yellow); color: var(--fg); }
+.wa svg, .web svg { width: 54px; height: 54px; flex: none; }
+.wa svg { fill: #fff; }
+.web svg { fill: none; stroke: var(--fg); stroke-width: 2.2; }
+.wa .num, .web .url { font-family: var(--font-display); font-size: 50px; line-height: 1; direction: ltr; unicode-bidi: isolate; letter-spacing: .5px; }
+.web .url { font-size: 42px; font-family: var(--font-body); font-weight: 800; letter-spacing: 0; }
+.qrbox { grid-column: 2; grid-row: 1 / 3; background: #fff; border-radius: 22px; padding: 16px 16px 8px; text-align: center; box-shadow: 0 0 0 5px var(--yellow), 0 10px 22px rgba(0,0,0,.35); }
+.qrbox .qr { display: block; width: 190px; height: 190px; }
+.qrbox span { display: block; margin-top: 6px; font-weight: 800; font-size: 21px; color: var(--fg); }
+.slogan { grid-column: 1 / -1; text-align: center; color: var(--yellow); font-weight: 700; font-size: 25px; }
 .slogan .geez { font-family: var(--font-geez); color: #fff; opacity: .85; margin-inline-start: 10px; }
 </style>
 </head>
@@ -280,17 +288,22 @@ html, body { margin: 0; background: #1a0f08; }
   <div class="cheap"><span>מחירים זולים</span> במיוחד!</div>
 
   <div class="cta">
-    <svg class="bg" viewBox="0 0 1080 200" preserveAspectRatio="none" aria-hidden="true">
-      <path filter="url(#rough)" fill="#3A2218" d="M-20 24 Q540 -6 1100 20 L1100 220 L-20 220 Z"/>
+    <svg class="bg" viewBox="0 0 1080 330" preserveAspectRatio="none" aria-hidden="true">
+      <path filter="url(#rough)" fill="#3A2218" d="M-20 24 Q540 -6 1100 20 L1100 350 L-20 350 Z"/>
     </svg>
-    <div class="row">
-      <div class="ask">מזמינים<br>בוואטסאפ<small>שעתיים מראש</small></div>
+    <h2>הזמנות ומשלוחים <span>בוואטסאפ או באתר</span></h2>
+    <div class="links">
       <div class="wa">
         <svg viewBox="0 0 32 32"><path d="M16 2a13 13 0 0 0-11 20l-2 7 7-2a13 13 0 1 0 6-25zm0 24a11 11 0 0 1-5.6-1.5l-.4-.2-4.1 1.1 1.1-4-.3-.4A11 11 0 1 1 16 26zm6-8.2c-.3-.2-1.9-1-2.2-1.1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7 0a9 9 0 0 1-2.6-1.6 10 10 0 0 1-1.8-2.3c-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.4.3-.6s0-.4-.1-.5l-1-2.4c-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.7.1-1 .5s-1.3 1.3-1.3 3.1 1.3 3.6 1.5 3.8 2.6 4 6.3 5.6c.9.4 1.6.6 2.1.8.9.3 1.7.2 2.3.1.7-.1 2.2-.9 2.5-1.8s.3-1.6.2-1.8c-.1-.1-.4-.2-.7-.4z"/></svg>
         <span class="num">052-661-8395</span>
       </div>
+      <div class="web">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2c3 3 4.5 6.5 4.5 10S15 19 12 22c-3-3-4.5-6.5-4.5-10S9 5 12 2z"/></svg>
+        <span class="url">parnusmom.vercel.app</span>
+      </div>
     </div>
-    <div class="slogan">למסורת יש טעם<span class="geez" lang="am">እንጀራ እና ወጥ በቤትዎ</span></div>
+    <div class="qrbox"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29 29" class="qr" aria-hidden="true"><path class="qrline" stroke="#2b1a0e" d="M0 0.5h7m2 0h1m1 0h1m4 0h1m5 0h7m-29 1h1m5 0h1m2 0h5m1 0h6m1 0h1m5 0h1m-29 1h1m1 0h3m1 0h1m1 0h1m1 0h1m1 0h2m2 0h2m4 0h1m1 0h3m1 0h1m-29 1h1m1 0h3m1 0h1m2 0h1m2 0h3m3 0h1m1 0h1m1 0h1m1 0h3m1 0h1m-29 1h1m1 0h3m1 0h1m1 0h4m1 0h2m1 0h1m1 0h1m3 0h1m1 0h3m1 0h1m-29 1h1m5 0h1m1 0h2m1 0h2m2 0h2m1 0h2m2 0h1m5 0h1m-29 1h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7m-20 1h2m1 0h1m1 0h1m2 0h1m-17 1h1m2 0h1m1 0h1m1 0h3m2 0h1m1 0h2m1 0h2m1 0h1m1 0h2m1 0h1m-26 1h1m5 0h4m2 0h2m2 0h2m3 0h3m2 0h2m-28 1h1m2 0h3m2 0h1m1 0h1m1 0h1m1 0h1m2 0h1m1 0h2m2 0h1m1 0h1m1 0h1m-29 1h1m1 0h1m1 0h1m5 0h1m2 0h2m2 0h1m3 0h1m1 0h1m1 0h1m1 0h2m-29 1h3m1 0h4m3 0h1m1 0h1m1 0h3m1 0h2m2 0h1m4 0h1m-26 1h2m2 0h1m1 0h1m1 0h3m2 0h1m5 0h1m1 0h1m1 0h1m1 0h1m-28 1h1m1 0h2m1 0h2m1 0h2m3 0h1m2 0h1m4 0h1m1 0h1m2 0h2m-27 1h1m4 0h2m1 0h2m3 0h1m1 0h1m4 0h2m1 0h1m2 0h1m-28 1h1m1 0h2m1 0h4m1 0h2m2 0h1m2 0h4m5 0h2m-29 1h1m1 0h1m2 0h1m1 0h1m1 0h1m6 0h1m1 0h1m3 0h3m1 0h1m1 0h1m-27 1h2m2 0h1m1 0h1m1 0h1m2 0h1m2 0h3m4 0h2m1 0h1m1 0h1m-27 1h1m2 0h1m1 0h1m1 0h1m4 0h1m2 0h4m2 0h1m1 0h1m1 0h2m-29 1h2m4 0h1m1 0h1m2 0h1m2 0h2m1 0h1m2 0h6m1 0h2m-21 1h4m3 0h3m2 0h1m3 0h1m1 0h1m1 0h1m-29 1h7m3 0h1m1 0h1m2 0h1m2 0h3m1 0h1m1 0h1m3 0h1m-29 1h1m5 0h1m2 0h3m1 0h3m3 0h2m3 0h2m-26 1h1m1 0h3m1 0h1m1 0h1m1 0h1m1 0h1m2 0h2m2 0h6m2 0h2m-29 1h1m1 0h3m1 0h1m5 0h1m5 0h1m4 0h1m2 0h2m-28 1h1m1 0h3m1 0h1m6 0h1m1 0h1m3 0h3m3 0h1m1 0h2m-29 1h1m5 0h1m1 0h2m4 0h5m1 0h1m2 0h1m1 0h1m1 0h2m-29 1h7m3 0h1m3 0h1m2 0h1m1 0h2m3 0h1m2 0h1"/></svg>
+<span>סרקו והזמינו</span></div>
   </div>
 
   <div class="tilet bottom"></div>
